@@ -69,6 +69,14 @@ export interface AnswerStartEvent {
 }
 
 /**
+ * Streaming chunk of the final answer
+ */
+export interface AnswerChunkEvent {
+  type: 'answer_chunk';
+  chunk: string;
+}
+
+/**
  * Agent completed with final result
  */
 export interface DoneEvent {
@@ -87,4 +95,5 @@ export type AgentEvent =
   | ToolEndEvent
   | ToolErrorEvent
   | AnswerStartEvent
+  | AnswerChunkEvent
   | DoneEvent;
