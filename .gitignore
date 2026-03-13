@@ -1,7 +1,14 @@
-# Environment variables
+# OS
+.DS_Store
+Thumbs.db
+
+# 环境变量（保护敏感信息）
 .env
 .env.local
-.env.*
+.env.*.local
+.env.development
+.env.test
+.env.production
 
 # Python
 __pycache__/
@@ -9,27 +16,13 @@ __pycache__/
 *$py.class
 *.so
 .Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-
-# Virtual environments
+.venv/
 venv/
-env/
 ENV/
-.venv
+.eggs/
+*.egg-info/
+dist/
+build/
 
 # Node.js
 node_modules/
@@ -37,23 +30,31 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# IDEs
+# IDE
 .vscode/
 .idea/
 *.swp
 *.swo
-*~
-.DS_Store
 
-# UV
-.uv/
+# 测试
+.pytest_cache/
+.coverage
+htmlcov/
 
-# Cursor files
+# Cursor
 .cursor/
+.claude/
 
-# Dexter context files (offloaded tool outputs)
-.dexter/*
+# 文档与测试程序
+mydoc/
+mytest/
 
+# 日志文件
+backend/logs/
+*.log
 
-logs/
-coverage.json
+# 上传文件
+backend/uploads/
+
+# Docker 数据
+data/
